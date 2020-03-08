@@ -1,0 +1,246 @@
+\hypertarget{line_drawing_8cpp}{}\doxysection{Files/line\+Drawing.cpp File Reference}
+\label{line_drawing_8cpp}\index{Files/lineDrawing.cpp@{Files/lineDrawing.cpp}}
+{\ttfamily \#include $<$gl/glut.\+h$>$}\newline
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}bresenham\+Functions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{line_drawing_8cpp_a207a70e671ee880269d8a9fc96a39087}{my\+Init}} ()
+\item 
+void \mbox{\hyperlink{line_drawing_8cpp_a1998153fa0eead2f4fd7231e9fed8bfb}{my\+Display}} ()
+\item 
+void \mbox{\hyperlink{line_drawing_8cpp_a8f257edd5d8beb0b88052335aba5351f}{color\+Inputs}} ()
+\item 
+int \mbox{\hyperlink{line_drawing_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{line_drawing_8cpp_a0a0797509f1d483c57dbc7679e0abef7}{g\+\_\+x\+Coor1}}
+\begin{DoxyCompactList}\small\item\em x Coordinate of first point \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{line_drawing_8cpp_af31b704c1e72b21fbb661f1cdd97a7d4}{g\+\_\+y\+Coor1}}
+\begin{DoxyCompactList}\small\item\em y Coordinate of first point \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{line_drawing_8cpp_aee59254cbeb8fc0cb7c765274659db0e}{g\+\_\+x\+Coor2}}
+\begin{DoxyCompactList}\small\item\em x Coordinate of second point \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{line_drawing_8cpp_a7164d84de14c270ba8f75fe1b841550b}{g\+\_\+y\+Coor2}}
+\begin{DoxyCompactList}\small\item\em y Coordinate of second point \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{line_drawing_8cpp_a68eb6c9b9f3397da8bb8f8efac15308f}{g\+\_\+hex\+Value}}
+\begin{DoxyCompactList}\small\item\em Hex value of background and line color. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{line_drawing_8cpp_ad5145c9d5047d3a2fa0b4af1c060cb07}{g\+\_\+l\+Red}}
+\begin{DoxyCompactList}\small\item\em Red Value of line color. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{line_drawing_8cpp_a377c6d300a41028d50f4a058dedd88c2}{g\+\_\+l\+Green}}
+\begin{DoxyCompactList}\small\item\em Green Value of line color. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{line_drawing_8cpp_a4f82a28a9e190707b155e2dfbdd1d9ad}{g\+\_\+l\+Blue}}
+\begin{DoxyCompactList}\small\item\em Blue Value of line color. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{line_drawing_8cpp_a4057238352fd457b7ac0397a214b7cb7}{g\+\_\+alpha}} = 1.\+0
+\begin{DoxyCompactList}\small\item\em Transparency of line and background. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{line_drawing_8cpp_a7e672a073232ae9c0719e6a8ac165705}{g\+\_\+b\+Red}}
+\begin{DoxyCompactList}\small\item\em Red Value of background color. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{line_drawing_8cpp_ab3a40f7fd698488c037ef4e08eae2e99}{g\+\_\+b\+Green}}
+\begin{DoxyCompactList}\small\item\em Green Value of background color. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{line_drawing_8cpp_aa956774b2a2d28286089699f866b72c1}{g\+\_\+b\+Blue}}
+\begin{DoxyCompactList}\small\item\em Blue Value of background color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{line_drawing_8cpp_a8f257edd5d8beb0b88052335aba5351f}\label{line_drawing_8cpp_a8f257edd5d8beb0b88052335aba5351f}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!colorInputs@{colorInputs}}
+\index{colorInputs@{colorInputs}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{colorInputs()}{colorInputs()}}
+{\footnotesize\ttfamily void color\+Inputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+void \mbox{\hyperlink{line_drawing_8cpp_a8f257edd5d8beb0b88052335aba5351f}{color\+Inputs()}}
+
+Summary of color\+Inputs function\+: \begin{DoxyVerb}Takes color inputs from user.
+\end{DoxyVerb}
+
+
+Parameters \+: Nothing
+
+Return Value \+: Nothing (Color variables are set accordingly)
+
+Description \+: \begin{DoxyVerb}Takes color inputs of background and line from user as
+hex values. Sets the color variables accordingly.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{line_drawing_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{line_drawing_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!main@{main}}
+\index{main@{main}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+int \mbox{\hyperlink{line_drawing_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main(int argc, char $\ast$$\ast$argv)}}
+
+Summary of main function\+: \begin{DoxyVerb}The core function of program. 
+\end{DoxyVerb}
+
+
+Parameters \+: Nothing (or command line inputs)
+
+Return Value \+: Exit code 0 when program is closed
+
+Description \+: \begin{DoxyVerb}The core function of program. First function to be called.
+Takes required inputs from user.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{line_drawing_8cpp_a1998153fa0eead2f4fd7231e9fed8bfb}\label{line_drawing_8cpp_a1998153fa0eead2f4fd7231e9fed8bfb}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!myDisplay@{myDisplay}}
+\index{myDisplay@{myDisplay}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{myDisplay()}{myDisplay()}}
+{\footnotesize\ttfamily void my\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+void \mbox{\hyperlink{line_drawing_8cpp_a1998153fa0eead2f4fd7231e9fed8bfb}{my\+Display()}}
+
+Summary of my\+Init function\+: \begin{DoxyVerb}Main loop function of the program.
+\end{DoxyVerb}
+
+
+Parameters \+: Nothing
+
+Return Value \+: Nothing (Displays the line in viewport window)
+
+Description \+: \begin{DoxyVerb}Main loop function of the program. Keeps displaying
+a line between given points until user closes the window.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{line_drawing_8cpp_a207a70e671ee880269d8a9fc96a39087}\label{line_drawing_8cpp_a207a70e671ee880269d8a9fc96a39087}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!myInit@{myInit}}
+\index{myInit@{myInit}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{myInit()}{myInit()}}
+{\footnotesize\ttfamily void my\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+void \mbox{\hyperlink{line_drawing_8cpp_a207a70e671ee880269d8a9fc96a39087}{my\+Init()}}
+
+Summary of my\+Init function\+: \begin{DoxyVerb}Initializes a window to display the line.
+\end{DoxyVerb}
+
+
+Parameters \+: Nothing
+
+Return Value \+: Nothing (Viewport window is initialized)
+
+Description \+: \begin{DoxyVerb}Initializes a window to display the line. Background and line
+colors are set to the ones given by the user. Window size is set to
+size of screen.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{line_drawing_8cpp_a4057238352fd457b7ac0397a214b7cb7}\label{line_drawing_8cpp_a4057238352fd457b7ac0397a214b7cb7}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_alpha@{g\_alpha}}
+\index{g\_alpha@{g\_alpha}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_alpha}{g\_alpha}}
+{\footnotesize\ttfamily float g\+\_\+alpha = 1.\+0}
+
+
+
+Transparency of line and background. 
+
+\mbox{\Hypertarget{line_drawing_8cpp_aa956774b2a2d28286089699f866b72c1}\label{line_drawing_8cpp_aa956774b2a2d28286089699f866b72c1}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_bBlue@{g\_bBlue}}
+\index{g\_bBlue@{g\_bBlue}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_bBlue}{g\_bBlue}}
+{\footnotesize\ttfamily float g\+\_\+b\+Blue}
+
+
+
+Blue Value of background color. 
+
+\mbox{\Hypertarget{line_drawing_8cpp_ab3a40f7fd698488c037ef4e08eae2e99}\label{line_drawing_8cpp_ab3a40f7fd698488c037ef4e08eae2e99}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_bGreen@{g\_bGreen}}
+\index{g\_bGreen@{g\_bGreen}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_bGreen}{g\_bGreen}}
+{\footnotesize\ttfamily float g\+\_\+b\+Green}
+
+
+
+Green Value of background color. 
+
+\mbox{\Hypertarget{line_drawing_8cpp_a7e672a073232ae9c0719e6a8ac165705}\label{line_drawing_8cpp_a7e672a073232ae9c0719e6a8ac165705}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_bRed@{g\_bRed}}
+\index{g\_bRed@{g\_bRed}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_bRed}{g\_bRed}}
+{\footnotesize\ttfamily float g\+\_\+b\+Red}
+
+
+
+Red Value of background color. 
+
+\mbox{\Hypertarget{line_drawing_8cpp_a68eb6c9b9f3397da8bb8f8efac15308f}\label{line_drawing_8cpp_a68eb6c9b9f3397da8bb8f8efac15308f}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_hexValue@{g\_hexValue}}
+\index{g\_hexValue@{g\_hexValue}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_hexValue}{g\_hexValue}}
+{\footnotesize\ttfamily int g\+\_\+hex\+Value}
+
+
+
+Hex value of background and line color. 
+
+\mbox{\Hypertarget{line_drawing_8cpp_a4f82a28a9e190707b155e2dfbdd1d9ad}\label{line_drawing_8cpp_a4f82a28a9e190707b155e2dfbdd1d9ad}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_lBlue@{g\_lBlue}}
+\index{g\_lBlue@{g\_lBlue}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_lBlue}{g\_lBlue}}
+{\footnotesize\ttfamily float g\+\_\+l\+Blue}
+
+
+
+Blue Value of line color. 
+
+\mbox{\Hypertarget{line_drawing_8cpp_a377c6d300a41028d50f4a058dedd88c2}\label{line_drawing_8cpp_a377c6d300a41028d50f4a058dedd88c2}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_lGreen@{g\_lGreen}}
+\index{g\_lGreen@{g\_lGreen}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_lGreen}{g\_lGreen}}
+{\footnotesize\ttfamily float g\+\_\+l\+Green}
+
+
+
+Green Value of line color. 
+
+\mbox{\Hypertarget{line_drawing_8cpp_ad5145c9d5047d3a2fa0b4af1c060cb07}\label{line_drawing_8cpp_ad5145c9d5047d3a2fa0b4af1c060cb07}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_lRed@{g\_lRed}}
+\index{g\_lRed@{g\_lRed}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_lRed}{g\_lRed}}
+{\footnotesize\ttfamily float g\+\_\+l\+Red}
+
+
+
+Red Value of line color. 
+
+\mbox{\Hypertarget{line_drawing_8cpp_a0a0797509f1d483c57dbc7679e0abef7}\label{line_drawing_8cpp_a0a0797509f1d483c57dbc7679e0abef7}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_xCoor1@{g\_xCoor1}}
+\index{g\_xCoor1@{g\_xCoor1}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_xCoor1}{g\_xCoor1}}
+{\footnotesize\ttfamily int g\+\_\+x\+Coor1}
+
+
+
+x Coordinate of first point 
+
+\mbox{\Hypertarget{line_drawing_8cpp_aee59254cbeb8fc0cb7c765274659db0e}\label{line_drawing_8cpp_aee59254cbeb8fc0cb7c765274659db0e}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_xCoor2@{g\_xCoor2}}
+\index{g\_xCoor2@{g\_xCoor2}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_xCoor2}{g\_xCoor2}}
+{\footnotesize\ttfamily int g\+\_\+x\+Coor2}
+
+
+
+x Coordinate of second point 
+
+\mbox{\Hypertarget{line_drawing_8cpp_af31b704c1e72b21fbb661f1cdd97a7d4}\label{line_drawing_8cpp_af31b704c1e72b21fbb661f1cdd97a7d4}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_yCoor1@{g\_yCoor1}}
+\index{g\_yCoor1@{g\_yCoor1}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_yCoor1}{g\_yCoor1}}
+{\footnotesize\ttfamily int g\+\_\+y\+Coor1}
+
+
+
+y Coordinate of first point 
+
+\mbox{\Hypertarget{line_drawing_8cpp_a7164d84de14c270ba8f75fe1b841550b}\label{line_drawing_8cpp_a7164d84de14c270ba8f75fe1b841550b}} 
+\index{lineDrawing.cpp@{lineDrawing.cpp}!g\_yCoor2@{g\_yCoor2}}
+\index{g\_yCoor2@{g\_yCoor2}!lineDrawing.cpp@{lineDrawing.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_yCoor2}{g\_yCoor2}}
+{\footnotesize\ttfamily int g\+\_\+y\+Coor2}
+
+
+
+y Coordinate of second point 
+

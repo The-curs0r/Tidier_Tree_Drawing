@@ -1,0 +1,58 @@
+\hypertarget{bresenham_functions_8h}{}\doxysection{Files/bresenham\+Functions.h File Reference}
+\label{bresenham_functions_8h}\index{Files/bresenhamFunctions.h@{Files/bresenhamFunctions.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bresenham_functions_8h_a60a98c6567ef36d494bee30b0b355ea6}{bresenham\+Line}} (int, int, int, int, int)
+\item 
+void \mbox{\hyperlink{bresenham_functions_8h_a56b9c600be11bb575e2ef6c02502096d}{bresenham\+Circle}} (int, int, int)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{bresenham_functions_8h_a56b9c600be11bb575e2ef6c02502096d}\label{bresenham_functions_8h_a56b9c600be11bb575e2ef6c02502096d}} 
+\index{bresenhamFunctions.h@{bresenhamFunctions.h}!bresenhamCircle@{bresenhamCircle}}
+\index{bresenhamCircle@{bresenhamCircle}!bresenhamFunctions.h@{bresenhamFunctions.h}}
+\doxysubsubsection{\texorpdfstring{bresenhamCircle()}{bresenhamCircle()}}
+{\footnotesize\ttfamily void bresenham\+Circle (\begin{DoxyParamCaption}\item[{int}]{xc,  }\item[{int}]{yc,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+void \mbox{\hyperlink{bresenham_circle_8cpp_a1755cf34cef1d00bdf7aa82dad8cb60c}{bresenham\+Circle(int xc, int yc, int radius)}}
+
+Summary of Bresenham Circle function\+: \begin{DoxyVerb}Determines where to plot the points to closely approximate the circumference
+of the circle of given radius centered at point (xc,yc).
+\end{DoxyVerb}
+
+
+Parameters \+: Cartesian coordinates of the center point and radius in integers
+
+Return Value \+: Nothing
+
+Description \+: \begin{DoxyVerb}Bresenham's circle algorithm is a crcle drawing algorithm that determines the points of an
+n-dimensional raster that should be selected in order to form a close 
+approximation to a circle of given center and radius.It uses the symmetry of circle to
+reduce the number of computations.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{bresenham_functions_8h_a60a98c6567ef36d494bee30b0b355ea6}\label{bresenham_functions_8h_a60a98c6567ef36d494bee30b0b355ea6}} 
+\index{bresenhamFunctions.h@{bresenhamFunctions.h}!bresenhamLine@{bresenhamLine}}
+\index{bresenhamLine@{bresenhamLine}!bresenhamFunctions.h@{bresenhamFunctions.h}}
+\doxysubsubsection{\texorpdfstring{bresenhamLine()}{bresenhamLine()}}
+{\footnotesize\ttfamily void bresenham\+Line (\begin{DoxyParamCaption}\item[{int}]{g\+\_\+x\+Coor1,  }\item[{int}]{g\+\_\+x\+Coor2,  }\item[{int}]{g\+\_\+y\+Coor1,  }\item[{int}]{g\+\_\+y\+Coor2,  }\item[{int}]{radius }\end{DoxyParamCaption})}
+
+void \mbox{\hyperlink{bresenham_line_8cpp_a478c98b09f829f5abd2d9c286dd10787}{bresenham\+Line(int g\+\_\+x\+Coor1, int g\+\_\+x\+Coor2, int g\+\_\+y\+Coor1, int g\+\_\+y\+Coor2,int radius)}}
+
+Summary of Bresenham Line function\+: \begin{DoxyVerb}Determines where to plot the points to closely approximate a staright line
+between two given points.
+If radius is >0 then this function does not plot points inside the circlesof radius r
+ centered at the endpoints. 
+\end{DoxyVerb}
+
+
+Parameters \+: Cartesian coordinates of the two points in integers
+
+Return Value \+: Nothing
+
+Description \+: \begin{DoxyVerb}Bresenham's line algorithm is a line drawing algorithm that determines the points of an
+n-dimensional raster that should be selected in order to form a close 
+approximation to a straight line between two points.
+\end{DoxyVerb}
+ 

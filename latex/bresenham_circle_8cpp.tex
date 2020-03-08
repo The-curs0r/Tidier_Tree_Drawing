@@ -1,0 +1,57 @@
+\hypertarget{bresenham_circle_8cpp}{}\doxysection{Files/bresenham\+Circle.cpp File Reference}
+\label{bresenham_circle_8cpp}\index{Files/bresenhamCircle.cpp@{Files/bresenhamCircle.cpp}}
+{\ttfamily \#include \char`\"{}bresenham\+Functions.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$gl/glut.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bresenham_circle_8cpp_a09e3b01f3547812e1319bdbe16c89787}{plot\+\_\+points}} (int \mbox{\hyperlink{tidier_tree_drawing_8cpp_af7601131832c4d97295f90019c8ff8fc}{xc}}, int \mbox{\hyperlink{tidier_tree_drawing_8cpp_a8470a9f95ece04985a5031e745042b7e}{yc}}, int x, int y)
+\item 
+void \mbox{\hyperlink{bresenham_circle_8cpp_a1755cf34cef1d00bdf7aa82dad8cb60c}{bresenham\+Circle}} (int \mbox{\hyperlink{tidier_tree_drawing_8cpp_af7601131832c4d97295f90019c8ff8fc}{xc}}, int \mbox{\hyperlink{tidier_tree_drawing_8cpp_a8470a9f95ece04985a5031e745042b7e}{yc}}, int r)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{bresenham_circle_8cpp_a1755cf34cef1d00bdf7aa82dad8cb60c}\label{bresenham_circle_8cpp_a1755cf34cef1d00bdf7aa82dad8cb60c}} 
+\index{bresenhamCircle.cpp@{bresenhamCircle.cpp}!bresenhamCircle@{bresenhamCircle}}
+\index{bresenhamCircle@{bresenhamCircle}!bresenhamCircle.cpp@{bresenhamCircle.cpp}}
+\doxysubsubsection{\texorpdfstring{bresenhamCircle()}{bresenhamCircle()}}
+{\footnotesize\ttfamily void bresenham\+Circle (\begin{DoxyParamCaption}\item[{int}]{xc,  }\item[{int}]{yc,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+void \mbox{\hyperlink{bresenham_circle_8cpp_a1755cf34cef1d00bdf7aa82dad8cb60c}{bresenham\+Circle(int xc, int yc, int radius)}}
+
+Summary of Bresenham Circle function\+: \begin{DoxyVerb}Determines where to plot the points to closely approximate the circumference
+of the circle of given radius centered at point (xc,yc).
+\end{DoxyVerb}
+
+
+Parameters \+: Cartesian coordinates of the center point and radius in integers
+
+Return Value \+: Nothing
+
+Description \+: \begin{DoxyVerb}Bresenham's circle algorithm is a crcle drawing algorithm that determines the points of an
+n-dimensional raster that should be selected in order to form a close 
+approximation to a circle of given center and radius.It uses the symmetry of circle to
+reduce the number of computations.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{bresenham_circle_8cpp_a09e3b01f3547812e1319bdbe16c89787}\label{bresenham_circle_8cpp_a09e3b01f3547812e1319bdbe16c89787}} 
+\index{bresenhamCircle.cpp@{bresenhamCircle.cpp}!plot\_points@{plot\_points}}
+\index{plot\_points@{plot\_points}!bresenhamCircle.cpp@{bresenhamCircle.cpp}}
+\doxysubsubsection{\texorpdfstring{plot\_points()}{plot\_points()}}
+{\footnotesize\ttfamily void plot\+\_\+points (\begin{DoxyParamCaption}\item[{int}]{xc,  }\item[{int}]{yc,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+void plot\+\_\+points(int x, int y)
+
+Summary of Plot Pixel function\+: \begin{DoxyVerb}Colors a pixel at screen location of (x,y).
+Uses symmetry of circle to plot the points in other regions.
+\end{DoxyVerb}
+
+
+Parameters \+: Cartesian coordinates of the point in integer
+
+Return Value \+: Nothing
+
+Description \+: \begin{DoxyVerb}Plot Points function uses glVertex2i(int,int) function to color
+the required pixel on screen.
+\end{DoxyVerb}
+ 

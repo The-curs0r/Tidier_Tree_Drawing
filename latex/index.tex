@@ -1,0 +1,63 @@
+\hypertarget{index_intro_sec}{}\doxysection{Introduction}\label{index_intro_sec}
+This is the documentation for Computer Graphics Assignment 1.~\newline
+ Group members are \+: 2018A7\+P\+S0201H A\+K\+S\+H\+AY T\+I\+W\+A\+RI~\newline
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~2018B5\+A70477H M\+U\+S\+H\+K\+AN S\+U\+R\+E\+K\+HA~\newline
+ Contains programs to\+:
+\begin{DoxyEnumerate}
+\item Draw a line
+\item Draw a circle
+\item Draw a tree
+\end{DoxyEnumerate}
+
+Bresenham\textquotesingle{}s Line and Circle Drawing Algorithms have been used to draw line and circle respectively.~\newline
+ Algorithm described in Tidier Drawings of Trees By E\+D\+W\+A\+RD M. R\+E\+I\+N\+G\+O\+LD A\+ND J\+O\+HN S. T\+I\+L\+F\+O\+RD (R1) has been used to assign coordinates to node. They are later printed using Bresenham\textquotesingle{}s Alogrithms. \hypertarget{index_install_sec}{}\doxysection{Compilation Commands \+:}\label{index_install_sec}
+
+\begin{DoxyEnumerate}
+\item For Line Drawing \+: g++ \mbox{\hyperlink{line_drawing_8cpp}{line\+Drawing.\+cpp}} \mbox{\hyperlink{bresenham_line_8cpp}{bresenham\+Line.\+cpp}} -\/o Line\+Drawing -\/lopengl32 -\/lglew32 -\/lfreeglut -\/lglu32 (Output \+: Line\+Drawing.\+exe)
+\item For Circle Drawing \+: g++ \mbox{\hyperlink{circle_drawing_8cpp}{circle\+Drawing.\+cpp}} \mbox{\hyperlink{bresenham_circle_8cpp}{bresenham\+Circle.\+cpp}} -\/o Circle\+Drawing -\/lopengl32 -\/lglew32 -\/lfreeglut -\/lglu32 (Output \+: Circle\+Drawing.\+exe)
+\item For Tree Drawing \+: g++ \mbox{\hyperlink{tidier_tree_drawing_8cpp}{tidier\+Tree\+Drawing.\+cpp}} \mbox{\hyperlink{bresenham_line_8cpp}{bresenham\+Line.\+cpp}} \mbox{\hyperlink{bresenham_circle_8cpp}{bresenham\+Circle.\+cpp}} -\/o Tidier\+Tree\+Drawing -\/lopengl32 -\/lglew32 -\/lfreeglut -\/lglu32 (Output \+: Tidier\+Tree\+Drawing.\+exe) 
+\end{DoxyEnumerate}\hypertarget{index_inout}{}\doxysubsection{Sample Inputs And Outputs With Timing Analysis \+:}\label{index_inout}
+
+\begin{DoxyEnumerate}
+\item For Line Drawing \+:~\newline
+\href{https://docs.google.com/document/d/16EjwT9XEoPUz-Qydl9aCNqgZJaw-h6mUGWaPzc6aQxw/edit?usp=sharing}{\texttt{ https\+://docs.\+google.\+com/document/d/16\+Ejw\+T9\+X\+Eo\+P\+Uz-\/\+Qydl9a\+C\+Nqg\+Z\+Jaw-\/h6m\+U\+G\+Wa\+Pzc6a\+Qxw/edit?usp=sharing}}
+\item For Circle Drawing \+:~\newline
+\href{https://docs.google.com/document/d/1as9-pjg96g8w6FEusnPrl_8lzQaXF8nRcBGiXvXXJlw/edit?usp=sharing}{\texttt{ https\+://docs.\+google.\+com/document/d/1as9-\/pjg96g8w6\+F\+Eusn\+Prl\+\_\+8lz\+Qa\+X\+F8n\+Rc\+B\+Gi\+Xv\+X\+X\+Jlw/edit?usp=sharing}}
+\item For Tree Drawing \+:~\newline
+\href{https://docs.google.com/document/d/1TtxwlponClbFgAwxCS2KIOK-rhuyrojtOEuMwjrHgQU/edit?usp=sharing}{\texttt{ https\+://docs.\+google.\+com/document/d/1\+Ttxwlpon\+Clb\+Fg\+Awx\+C\+S2\+K\+I\+O\+K-\/rhuyrojt\+O\+Eu\+Mwjr\+Hg\+Q\+U/edit?usp=sharing}} 
+\end{DoxyEnumerate}\hypertarget{index_issuecoding}{}\doxysubsection{General Issues In Coding \+:}\label{index_issuecoding}
+
+\begin{DoxyEnumerate}
+\item Open\+GL setup was a really hard task. It took too much time to set up in Windows.~\newline
+
+\item Bresenham\textquotesingle{}s Line and Circle algorithms were implemented easily in c++ as they dont require much work.~\newline
+
+\item The research paper took signficant amount of work to understand.~\newline
+
+\item Algorithm implementation was not that easy but the pseudocode given helped in implementing it.~\newline
+
+\item Passing wrong pointers was a mistake that took too long to recify.
+\item I learnt how to debug in VS Code during this course of this assignment which was used in recitifying the above mistake.
+\item Timing analysis also took a while to learn i.\+e. where to put start and end points.
+\item Looking up for Open\+GL commands also took some time as I was unable to find good sources for them.
+\item We also implented a small function which allows user to select desired colors for components. 
+\end{DoxyEnumerate}\hypertarget{index_algoanalysis}{}\doxysubsection{Algorithm Analysis \+:}\label{index_algoanalysis}
+The time required by Algorithm TR is completely determined by the while loop because S\+E\+T\+UP iS executed exactly once per node of the tree.~\newline
+
+\begin{DoxyEnumerate}
+\item Let F(\+T) be the number of times the test of the loop succeeds, i.\+e., the number of times the body of the loop is executed for a tree T.
+\item F(\+T) = n(\+T) -\/ h(\+T). The proof can be shown by induction on N, the number of nodes in T.
+\item The best case is a degenerate tree in which no node has two sons; then n(\+T) = h(\+T) and the loop body is never executed.
+\item The-\/ worst case is a complete binary tree for which the loop is executed about n(\+T) -\/ lg n(\+T) times.
+\item Algorithm TR can easily be extended to handle m-\/ary trees without affecting its linear performance.(This wasn\textquotesingle{}t implemented in this assignment.)~\newline
+ ~\newline
+Issues with algorithm \+: ~\newline
+
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Algorithm TR run into a problem for many trees in which one subtree is wide and the other consists of just a few nodes.
+\item A second issue in discretization is that coordinates must be given integer values. 
+\end{DoxyEnumerate}\hypertarget{index_rem}{}\doxysubsection{Remarks \+:}\label{index_rem}
+The research paper gave us insight on how a problem as simple as drawing a tree can involve such detailed algorithm.~\newline
+ Implementation of all the three algorithms was a challenging but rather fun task.~\newline
+ 
