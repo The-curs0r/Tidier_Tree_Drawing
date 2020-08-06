@@ -1,5 +1,7 @@
 html/
 html1213/
 latex/
+Executables/
 *.zip
+*.rar
 Files/mainpage.cpp
